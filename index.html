@@ -250,31 +250,28 @@
           </div>
         </a>
 
-        <div class="project-card fade-up">
-          <div class="card hoverable" style="margin-bottom:0.75rem;border-radius:8px;overflow:hidden;box-shadow:none;border:none;">
-            <figure style="margin:0;">
-              <picture>
-                <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="assets/img/projects/cancer-demo-480.webp">
-                <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="assets/img/projects/cancer-demo-800.webp">
-                <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="assets/img/projects/cancer-demo-1400.webp">
-                <img src="assets/img/projects/cancer-demo.gif"
+ <a href="project-security-pcb.html" class="project-card-link" style="text-decoration:none;color:inherit;">
+          <div class="project-card fade-up">
+            <div class="card hoverable" style="margin-bottom:0.75rem;border-radius:8px;overflow:hidden;box-shadow:none;border:none;">
+              <figure style="margin:0;">
+                <img src="assets/img/projects/pcb1.jpg"
                      width="100%" height="auto"
-                     alt="Breast cancer classification demo"
+                     alt="Smart Security and Monitoring System PCB Design"
                      style="display:block;width:100%;height:auto;border-radius:8px;"
-                     onerror="this.style.display='none'">
-              </picture>
-            </figure>
+                     onerror="this.onerror=null; this.src='assets/img/projects/default.jpg';">
+              </figure>
+            </div>
+            <div class="project-card-header">
+              <span class="project-name" data-i18n="proj2_name">Smart Security and Monitoring System PCB Design</span>
+              <span class="project-date-tag">Apr–May 2026</span>
+            </div>
+            <p class="project-desc" data-i18n="proj2_desc">Designed a complete multi-sheet PCB-based Smart Security and Monitoring System from scratch using Altium Designer. Implemented an isolated AC-DC/DC-DC system, localized processing via STM32, ESP32 IoT connectivity, and hardware filtering for reliable multi-sensor security tracking.</p>
+            <div class="tech-stack">
+              <span class="tag">Altium Designer</span><span class="tag">STM32</span><span class="tag">ESP32</span>
+              <span class="tag">PCB Design</span><span class="tag">Hardware Design</span>
+            </div>
           </div>
-          <div class="project-card-header">
-            <span class="project-name" data-i18n="proj2_name">Breast Cancer Classification (Deep Learning)</span>
-            <span class="project-date-tag">Apr–May 2025</span>
-          </div>
-          <p class="project-desc" data-i18n="proj2_desc">Classified histopathological breast cancer images using InceptionResNetV2 and VGG16, benchmarked against traditional ML methods. Achieved 90% classification accuracy through optimized preprocessing and segmentation.</p>
-          <div class="tech-stack">
-            <span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Jupyter</span>
-            <span class="tag">InceptionResNetV2</span><span class="tag">VGG16</span>
-          </div>
-        </div>
+        </a>
 
       </div>
 
@@ -373,8 +370,8 @@ const i18n = {
     proj1_name: "3D Audio &amp; AI-Assisted Obstacle Detection Glasses",
     ongoing_badge: "● ongoing",
     proj1_desc: "TÜBİTAK 2209-A funded smart glasses for visually impaired users with real-time YOLO-based object detection and directional 3D audio feedback on Raspberry Pi.",
-    proj2_name: "Breast Cancer Classification (Deep Learning)",
-    proj2_desc: "Classified histopathological breast cancer images using InceptionResNetV2 and VGG16, benchmarked against traditional ML methods. Achieved 90% classification accuracy through optimized preprocessing and segmentation.",
+    proj2_name: "Smart Security and Monitoring System PCB Design",
+    proj2_desc: "Designed a complete multi-sheet PCB-based Smart Security and Monitoring System from scratch using Altium Designer. Implemented an isolated AC-DC/DC-DC system, localized processing via STM32, ESP32 IoT connectivity, and hardware filtering for reliable multi-sensor security tracking.",
     section_skills: "skills",
     skill_prog: "Programming", skill_embedded: "Embedded Platforms", skill_comms: "Communication Protocols",
     skill_tools: "Software / Tools", skill_signal: "Signal Processing", skill_lang: "Languages",
