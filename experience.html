@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light" data-lang="en">
 <head>
+  
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Experience | Ahmed Tamer</title>
-  <link rel="icon" type="image/jpeg" href="assets/img/ahmed1.jpeg">
+  <title>Pınar Yılmaz</title>
+  <link rel="icon" type="image/jpeg" href="assets/img/pinar.jpeg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,10 +25,9 @@
       font-family: 'Roboto', sans-serif !important;
       font-weight: 300 !important;
       font-size: 17.28px !important;
-      line-height: 1.85 !important;   /* generous line spacing for 1070px justified layout */
+      line-height: 1.85 !important;
     }
-    
-    /* Headings keep a slightly heavier weight so hierarchy stays clear */
+
     h1, h2, h3, h4, h5, h6,
     .post-title,
     .exp-title,
@@ -36,22 +36,20 @@
     .edu-degree,
     .navbar-brand {
       font-family: 'Roboto', sans-serif !important;
-      font-weight: 500 !important;    /* medium — still in the Roboto family */
+      font-weight: 500 !important;
     }
 
-    /* Bold/strong stays readable */
     strong, b {
       font-family: 'Roboto', sans-serif !important;
       font-weight: 500 !important;
     }
 
-    /* Inline code / tech tags stay legible */
     .tag, code, pre {
       font-size: 15px !important;
       line-height: 1.7 !important;
     }
 
-    /* ── Circular Profile Image  321 × 321 px ── */
+    /* ── Profile image ── */
     .profile figure img,
     .profile img {
       width:  321px !important;
@@ -66,7 +64,6 @@
       display: block !important;
     }
 
-    /* Give the figure a fixed size so the float doesn't collapse */
     .profile figure {
       width:  321px !important;
       height: 321px !important;
@@ -77,21 +74,141 @@
       float: right;
       margin-left: 2rem;
     }
-    /* ── Icon size fix — overrides the global "a" font-size reset above ── */
-.social .contact-icons,
-.social .contact-icons a,
-.social .contact-icons a i {
-  font-size: 3.8rem !important;  /* ← change this ONE number to resize all icons */
-  line-height: 1 !important;
-}
-  </style>
+
+    .social .contact-icons,
+    .social .contact-icons a,
+    .social .contact-icons a i {
+      font-size: 3.8rem !important;
+      line-height: 1 !important;
+    }
+
+    /* ── Project section ── */
+    .project-section {
+      margin-top: 2.5rem;
+    }
+
+    .project-section h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .project-block {
+      margin-bottom: 2.8rem;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+    }
+
+    .project-block:last-child {
+      border-bottom: none;
+    }
+
+    .project-block h3 {
+      font-size: 1.15rem !important;
+      font-weight: 500 !important;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-tools {
+      color: var(--global-text-color-light, #828282);
+      font-size: 15px !important;
+      margin-bottom: 0.7rem;
+    }
+
+    .project-block ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Photo grid ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .photo-grid img {
+      width: 100% !important;
+      height: 200px !important;
+      object-fit: cover !important;
+      border-radius: 6px !important;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .photo-grid img:hover {
+      opacity: 0.85;
+    }
+
+    /* ── Lightbox ── */
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90vw !important;
+      max-height: 88vh !important;
+      border-radius: 6px !important;
+      object-fit: contain !important;
+      box-shadow: 0 8px 48px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 28px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+      line-height: 1;
+      opacity: 0.8;
+    }
+
+    .lightbox-close:hover { opacity: 1; }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2.2rem;
+      cursor: pointer;
+      opacity: 0.7;
+      padding: 0 16px;
+    }
+
+    .lightbox-nav:hover { opacity: 1; }
+    .lightbox-nav.prev { left: 10px; }
+    .lightbox-nav.next { right: 10px; }
+
+    /* ── Sub-section heading inside project block ── */
+    .project-subsection {
+      font-weight: 500 !important;
+      font-size: 1rem !important;
+      margin-top: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+</style>
 </head>
 <body class="fixed-top-nav">
 
 <header>
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Ahmed Tamer</a>
+      <a class="navbar-brand" href="index.html">Pınar Yılmaz</a>
       <button class="navbar-toggler collapsed ml-auto" type="button"
         data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,94 +246,300 @@
     <article>
 
       <h1 class="page-h1" data-i18n="page_h1">experience</h1>
-      <p class="page-subtitle" data-i18n="page_subtitle">My professional and research experience in engineering and machine learning.</p>
+      <p class="page-subtitle" data-i18n="page_subtitle">My professional and research experience in engineering and embedded systems.</p>
 
+      <!-- ── EXP 1: PCB Design ── -->
       <div class="exp-item">
         <div class="exp-header">
-          <span class="exp-title" data-i18n="exp1_title">Technical Operations Engineer</span>
-          <span class="exp-date" data-i18n="exp1_date">Sep 2024 – Present</span>
+          <span class="exp-title" data-i18n="exp1_title">Engineering Intern — PCB Design</span>
+          <span class="exp-date" data-i18n="exp1_date">Apr 2026 – May 2026</span>
         </div>
-        <div class="exp-company" data-i18n="exp1_company">Four Mansions Hotel — Kayseri, Turkey</div>
+        <div class="exp-company" data-i18n="exp1_company">MASSWELL — Kayseri, Turkey</div>
         <div class="tech-stack">
-          <span class="tag">ESP32</span><span class="tag">Blynk IoT</span>
-          <span class="tag">Python</span><span class="tag">Industrial Contactors</span><span class="tag">Circuit Breakers</span>
+          <span class="tag">Altium Designer</span>
+          <span class="tag">PCB Design</span>
+          <span class="tag">STM32</span>
+          <span class="tag">Soldering</span>
         </div>
         <ul class="exp-bullets" data-i18n="exp1_bullets" data-i18n-html>
-          <li>Designed and deployed a remote Gate Opener system using an ESP32 microcontroller and Blynk IoT platform, enabling wireless access control and eliminating manual intervention for facility staff.</li>
-          <li>Optimized the hotel's industrial lighting infrastructure by reconfiguring contactor and circuit breaker layouts, improving energy distribution reliability and reducing fault risk.</li>
-          <li>Built a Python-based web scraping and market intelligence tool to automatically track competitor hotel pricing and occupancy trends, directly supporting management's revenue strategy decisions.</li>
-          <li>Cross-trained across kitchen, front-of-house reception, and technical maintenance departments — demonstrating rapid operational adaptability and effective communication at all organizational levels.</li>
+          <li>Led PCB design for an STM32-based smart security system, from schematic design through manufacturing files.</li>
+          <li>Prepared PCB routing and production (Gerber) files for fabrication.</li>
+          <li>Performed board assembly, soldering, and hardware validation testing.</li>
         </ul>
       </div>
 
+      <!-- ── EXP 2: Embedded Systems ── -->
       <div class="exp-item exp-divider">
         <div class="exp-header">
-          <span class="exp-title" data-i18n="exp2_title">Machine Learning Intern</span>
-          <span class="exp-date" data-i18n="exp2_date">Jun 2024 – Aug 2024</span>
+          <span class="exp-title" data-i18n="exp2_title">Engineering Intern — Embedded Systems</span>
+          <span class="exp-date" data-i18n="exp2_date">Feb 2026 – Mar 2026</span>
         </div>
-        <div class="exp-company" data-i18n="exp2_company">MTM Biotech — Kayseri, Turkey</div>
+        <div class="exp-company" data-i18n="exp2_company">MASSWELL — Kayseri, Turkey</div>
         <div class="tech-stack">
-          <span class="tag">Python</span><span class="tag">CNN</span>
-          <span class="tag">Wavelet Transform</span><span class="tag">EMG Signal Processing</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">C++</span>
+          <span class="tag">Arduino IDE</span>
+          <span class="tag">SD Card Module</span>
+          <span class="tag">MQTT</span>
         </div>
         <ul class="exp-bullets" data-i18n="exp2_bullets" data-i18n-html>
-          <li>Developed a classification model achieving <strong>82% accuracy</strong> to decode hand gestures from EMG signals, enabling control of individual finger movements on a prosthetic arm.</li>
-          <li>Applied CNN deep learning and wavelet transformation for feature extraction, significantly boosting model accuracy beyond baseline approaches.</li>
-          <li>Managed the full ML pipeline: data collection, preprocessing, feature engineering, model training, and real-time inference output to hardware.</li>
+          <li>Built a system that collects battery data over UART via ESP32 and logs it to an SD card with RTC integration.</li>
+          <li>Designed a desktop application enabling real-time monitoring and file download without physically removing the SD card, reducing field maintenance time.</li>
         </ul>
       </div>
 
-      <h2 data-i18n="section_references">references</h2>
-      <div class="ref-card">
-        <div class="ref-name">Oğuzhan Ayyıldız</div>
-        <div class="ref-role" data-i18n="ref_role">COO, MTM Biotech</div>
-        <a class="ref-email" href="mailto:oguzhan.ayyildiz@agu.edu.tr">oguzhan.ayyildiz@agu.edu.tr</a>
+      <!-- ── EXP 3: Communication Systems ── -->
+      <div class="exp-item exp-divider">
+        <div class="exp-header">
+          <span class="exp-title" data-i18n="exp3_title">Engineering Intern — Communication Systems</span>
+          <span class="exp-date" data-i18n="exp3_date">Jul 2025 – Aug 2025</span>
+        </div>
+        <div class="exp-company" data-i18n="exp3_company">MASSWELL — Kayseri, Turkey</div>
+        <div class="tech-stack">
+          <span class="tag">ESP32</span>
+          <span class="tag">C++</span>
+          <span class="tag">Arduino IDE</span>
+          <span class="tag">GSM Module</span>
+          <span class="tag">MQTT</span>
+        </div>
+        <ul class="exp-bullets" data-i18n="exp3_bullets" data-i18n-html>
+          <li>Implemented hardware-software integration for battery management system communication via the SIM800L module.</li>
+          <li>Built remote monitoring infrastructure using MQTT over TCP for real-time data transmission.</li>
+        </ul>
       </div>
+
+      <!-- ══════════════════════════════════════════
+           PROJECT DETAILS
+      ══════════════════════════════════════════ -->
+      <div class="project-section">
+        <h2 data-i18n="section_projects">projects</h2>
+
+        <!-- Project A: Battery Monitoring Data Logger -->
+        <div class="project-block">
+          <h3 data-i18n="proj1_name">Battery Monitoring Data Logger &amp; Desktop Application</h3>
+          <div class="project-tools" data-i18n="proj1_tools">ESP32 · C++ · Python · UART · SPI · RTC · SD Card · CSV</div>
+          <ul class="exp-bullets" data-i18n="proj1_bullets" data-i18n-html>
+            <li>Developed C++ firmware for an ESP32-based battery monitoring and data logging system.</li>
+            <li>Implemented UART, SPI, RTC, and SD-card integration for battery parameter logging.</li>
+            <li>Developed a Python desktop application for real-time monitoring, fault detection, file management, and data visualization.</li>
+            <li>Optimized file transfer performance, reducing download time from approximately <strong>50 minutes to 7 minutes</strong>.</li>
+            <li>Implemented automatic fault detection, watchdog-based communication monitoring, and CSV export functionality.</li>
+          </ul>
+          <div class="photo-grid" data-gallery="software">
+            <img src="assets/img/a1.jpg" alt="Battery logger screenshot 1" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/a2.jpg" alt="Battery logger screenshot 2" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/a3.jpg" alt="Battery logger screenshot 3" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/a4.jpg" alt="Battery logger screenshot 4" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <!-- Project B: ESP32-Based Battery Monitoring App -->
+        <div class="project-block">
+          <h3 data-i18n="proj2_name">ESP32-Based Battery Monitoring Application</h3>
+          <div class="project-tools" data-i18n="proj2_tools">Python · ESP32 · BQ78Z100 BMS · UART · JSON · CSV</div>
+          <ul class="exp-bullets" data-i18n="proj2_bullets" data-i18n-html>
+            <li>Developed a Python desktop application for monitoring battery parameters acquired through an ESP32 and BQ78Z100-based BMS.</li>
+            <li>Implemented UART communication, data parsing, JSON-based storage, automatic record management, and CSV export.</li>
+            <li>Designed a graphical user interface for real-time battery monitoring and diagnostics.</li>
+          </ul>
+        </div>
+
+        <!-- Project C: Inventory Management System -->
+        <div class="project-block">
+          <h3 data-i18n="proj3_name">Masswell Inventory Management System</h3>
+          <div class="project-tools" data-i18n="proj3_tools">JavaScript · Next.js · Supabase · Vercel · REST API</div>
+          <ul class="exp-bullets" data-i18n="proj3_bullets" data-i18n-html>
+            <li>Developed a cloud-based inventory management platform with real-time stock tracking and inventory analytics.</li>
+            <li>Implemented product, category, warehouse, and stock movement management using Supabase.</li>
+            <li>Integrated frontend and backend communication through REST APIs over HTTPS.</li>
+            <li>Designed responsive user interfaces and deployed the application on Vercel.</li>
+          </ul>
+        </div>
+
+        <!-- Project D: Smart Security PCB -->
+        <div class="project-block">
+          <h3 data-i18n="proj4_name">Smart Security and Monitoring System — PCB Design</h3>
+          <div class="project-tools" data-i18n="proj4_tools">Altium Designer · STM32 · ESP32 · Schematic Capture · Hardware Design</div>
+
+          <p data-i18n="proj4_overview">Designed a complete multi-sheet PCB-based Smart Security and Monitoring System from scratch using Altium Designer. The project involved custom component library creation, schematic capture, PCB layout design, power distribution planning, signal routing, design verification, and preparation of manufacturing-ready outputs.</p>
+
+          <p class="project-subsection" data-i18n="proj4_s1">Power Management Design</p>
+          <ul class="exp-bullets" data-i18n="proj4_s1_bullets" data-i18n-html>
+            <li>Designed an isolated AC-to-DC power conversion stage including transformer, bridge rectifier, filtering capacitors, and protection components.</li>
+            <li>Developed multi-stage DC-DC power architecture (12V→5V→3.3V) to provide stable power rails for digital and analog subsystems.</li>
+            <li>Implemented relay power circuits and a protected power distribution network for external load control.</li>
+            <li>Selected passive components and filtering stages to improve power stability and reduce electrical noise.</li>
+            <li>Designed connector interfaces for programming, sensors, communication modules, and external peripherals.</li>
+          </ul>
+
+          <p class="project-subsection" data-i18n="proj4_s2">Microcontroller and Control Unit Design</p>
+          <ul class="exp-bullets" data-i18n="proj4_s2_bullets" data-i18n-html>
+            <li>Designed the central STM32-based control board responsible for system monitoring, communication, and decision making.</li>
+            <li>Integrated peripherals including ESP32 Wi-Fi module, RTC, temperature sensor, PIR detector, buzzer alarm, and relay control outputs.</li>
+            <li>Implemented communication interfaces using UART, SPI, I²C, ADC, GPIO, and SWD programming/debug interfaces.</li>
+            <li>Designed clock circuitry, reset circuitry, boot configuration, ESD protection, pull-up/pull-down networks, and decoupling capacitor networks.</li>
+            <li>Performed signal routing and hardware integration considering power integrity and noise reduction requirements.</li>
+          </ul>
+
+          <p class="project-subsection" data-i18n="proj4_s3">Sensor Board Design</p>
+          <ul class="exp-bullets" data-i18n="proj4_s3_bullets" data-i18n-html>
+            <li>Designed a dedicated sensor board for environmental monitoring and intrusion detection.</li>
+            <li>Implemented PIR motion detection circuitry including analog signal conditioning and filtering stages.</li>
+            <li>Designed temperature sensing circuitry with analog filtering and ADC interfacing.</li>
+            <li>Developed transistor-based LED driver circuits for visual system status indication.</li>
+            <li>Applied analog filtering techniques to improve measurement accuracy and reduce sensor noise.</li>
+          </ul>
+
+          <p class="project-subsection" data-i18n="proj4_s4">PCB Design and Verification</p>
+          <ul class="exp-bullets" data-i18n="proj4_s4_bullets" data-i18n-html>
+            <li>Created custom schematic symbols, PCB footprints, and 3D component models directly from manufacturer datasheets.</li>
+            <li>Designed a multi-sheet schematic architecture to improve project organization and maintainability.</li>
+            <li>Performed PCB component placement, routing, and power trace optimization.</li>
+            <li>Applied trace-width calculations for current-carrying power lines and optimized decoupling capacitor placement.</li>
+            <li>Executed Design Rule Check (DRC) verification and resolved spacing, silkscreen, footprint, and routing violations.</li>
+            <li>Generated manufacturing-ready PCB outputs including Gerber files and fabrication documentation.</li>
+          </ul>
+
+          <div class="photo-grid" data-gallery="pcb">
+            <img src="assets/img/pcb1.jpg" alt="PCB design view 1" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/pcb2.jpg" alt="PCB design view 2" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/pcb3.jpg" alt="PCB design view 3" loading="lazy" onerror="this.style.display='none'">
+            <img src="assets/img/pcb4.jpg" alt="PCB design view 4" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div><!-- /project-section -->
 
     </article>
   </div>
 </div>
 
+<!-- ── Lightbox ── -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox-close" id="lb-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lightbox-nav next" id="lb-next" aria-label="Next">&#8250;</button>
+</div>
+
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    <span data-i18n="footer_copy">© Copyright 2026 Ahmed Tamer</span>
-    &nbsp;·&nbsp; <a href="mailto:ahmed2000tamer2@gmail.com">ahmed2000tamer2@gmail.com</a>
+    <span data-i18n="footer_copy">© Copyright 2026 Pınar Yılmaz</span>
+    &nbsp;·&nbsp; <a href="mailto:pnr.ylmz368@gmail.com">pnr.ylmz368@gmail.com</a>
   </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
 <script>
+/* ── i18n ── */
 const i18n = {
   en: {
-    page_title: "Experience | Ahmed Tamer",
+    page_title: "Experience | Pınar Yılmaz",
     nav_about: "about", nav_experience: "experience", nav_projects: "projects",
     nav_repositories: "repositories", nav_cv: "cv",
     page_h1: "experience",
-    page_subtitle: "My professional and research experience in engineering and machine learning.",
-    exp1_title: "Technical Operations Engineer", exp1_date: "Sep 2024 – Present",
-    exp1_company: "Four Mansions Hotel — Kayseri, Turkey",
-    exp1_bullets: `<li>Designed and deployed a remote Gate Opener system using an ESP32 microcontroller and Blynk IoT platform, enabling wireless access control and eliminating manual intervention for facility staff.</li><li>Optimized the hotel's industrial lighting infrastructure by reconfiguring contactor and circuit breaker layouts, improving energy distribution reliability and reducing fault risk.</li><li>Built a Python-based web scraping and market intelligence tool to automatically track competitor hotel pricing and occupancy trends, directly supporting management's revenue strategy decisions.</li><li>Cross-trained across kitchen, front-of-house reception, and technical maintenance departments — demonstrating rapid operational adaptability and effective communication at all organizational levels.</li>`,
-    exp2_title: "Machine Learning Intern", exp2_date: "Jun 2024 – Aug 2024",
-    exp2_company: "MTM Biotech — Kayseri, Turkey",
-    exp2_bullets: `<li>Developed a classification model achieving <strong>82% accuracy</strong> to decode hand gestures from EMG signals, enabling control of individual finger movements on a prosthetic arm.</li><li>Applied CNN deep learning and wavelet transformation for feature extraction, significantly boosting model accuracy beyond baseline approaches.</li><li>Managed the full ML pipeline: data collection, preprocessing, feature engineering, model training, and real-time inference output to hardware.</li>`,
-    section_references: "references", ref_role: "COO, MTM Biotech",
-    footer_copy: "© Copyright 2026 Ahmed Tamer"
+    page_subtitle: "My professional and research experience in engineering and embedded systems.",
+
+    exp1_title: "Engineering Intern — PCB Design",
+    exp1_date: "Apr 2026 – May 2026",
+    exp1_company: "MASSWELL — Kayseri, Turkey",
+    exp1_bullets: `<li>Led PCB design for an STM32-based smart security system, from schematic design through manufacturing files.</li><li>Prepared PCB routing and production (Gerber) files for fabrication.</li><li>Performed board assembly, soldering, and hardware validation testing.</li>`,
+
+    exp2_title: "Engineering Intern — Embedded Systems",
+    exp2_date: "Feb 2026 – Mar 2026",
+    exp2_company: "MASSWELL — Kayseri, Turkey",
+    exp2_bullets: `<li>Built a system that collects battery data over UART via ESP32 and logs it to an SD card with RTC integration.</li><li>Designed a desktop application enabling real-time monitoring and file download without physically removing the SD card, reducing field maintenance time.</li>`,
+
+    exp3_title: "Engineering Intern — Communication Systems",
+    exp3_date: "Jul 2025 – Aug 2025",
+    exp3_company: "MASSWELL — Kayseri, Turkey",
+    exp3_bullets: `<li>Implemented hardware-software integration for battery management system communication via the SIM800L module.</li><li>Built remote monitoring infrastructure using MQTT over TCP for real-time data transmission.</li>`,
+
+    section_projects: "projects",
+
+    proj1_name: "Battery Monitoring Data Logger & Desktop Application",
+    proj1_tools: "ESP32 · C++ · Python · UART · SPI · RTC · SD Card · CSV",
+    proj1_bullets: `<li>Developed C++ firmware for an ESP32-based battery monitoring and data logging system.</li><li>Implemented UART, SPI, RTC, and SD-card integration for battery parameter logging.</li><li>Developed a Python desktop application for real-time monitoring, fault detection, file management, and data visualization.</li><li>Optimized file transfer performance, reducing download time from approximately <strong>50 minutes to 7 minutes</strong>.</li><li>Implemented automatic fault detection, watchdog-based communication monitoring, and CSV export functionality.</li>`,
+
+    proj2_name: "ESP32-Based Battery Monitoring Application",
+    proj2_tools: "Python · ESP32 · BQ78Z100 BMS · UART · JSON · CSV",
+    proj2_bullets: `<li>Developed a Python desktop application for monitoring battery parameters acquired through an ESP32 and BQ78Z100-based BMS.</li><li>Implemented UART communication, data parsing, JSON-based storage, automatic record management, and CSV export.</li><li>Designed a graphical user interface for real-time battery monitoring and diagnostics.</li>`,
+
+    proj3_name: "Masswell Inventory Management System",
+    proj3_tools: "JavaScript · Next.js · Supabase · Vercel · REST API",
+    proj3_bullets: `<li>Developed a cloud-based inventory management platform with real-time stock tracking and inventory analytics.</li><li>Implemented product, category, warehouse, and stock movement management using Supabase.</li><li>Integrated frontend and backend communication through REST APIs over HTTPS.</li><li>Designed responsive user interfaces and deployed the application on Vercel.</li>`,
+
+    proj4_name: "Smart Security and Monitoring System — PCB Design",
+    proj4_tools: "Altium Designer · STM32 · ESP32 · Schematic Capture · Hardware Design",
+    proj4_overview: "Designed a complete multi-sheet PCB-based Smart Security and Monitoring System from scratch using Altium Designer. The project involved custom component library creation, schematic capture, PCB layout design, power distribution planning, signal routing, design verification, and preparation of manufacturing-ready outputs.",
+
+    proj4_s1: "Power Management Design",
+    proj4_s1_bullets: `<li>Designed an isolated AC-to-DC power conversion stage including transformer, bridge rectifier, filtering capacitors, and protection components.</li><li>Developed multi-stage DC-DC power architecture (12V→5V→3.3V) to provide stable power rails for digital and analog subsystems.</li><li>Implemented relay power circuits and a protected power distribution network for external load control.</li><li>Selected passive components and filtering stages to improve power stability and reduce electrical noise.</li><li>Designed connector interfaces for programming, sensors, communication modules, and external peripherals.</li>`,
+
+    proj4_s2: "Microcontroller and Control Unit Design",
+    proj4_s2_bullets: `<li>Designed the central STM32-based control board responsible for system monitoring, communication, and decision making.</li><li>Integrated peripherals including ESP32 Wi-Fi module, RTC, temperature sensor, PIR detector, buzzer alarm, and relay control outputs.</li><li>Implemented communication interfaces using UART, SPI, I²C, ADC, GPIO, and SWD programming/debug interfaces.</li><li>Designed clock circuitry, reset circuitry, boot configuration, ESD protection, pull-up/pull-down networks, and decoupling capacitor networks.</li><li>Performed signal routing and hardware integration considering power integrity and noise reduction requirements.</li>`,
+
+    proj4_s3: "Sensor Board Design",
+    proj4_s3_bullets: `<li>Designed a dedicated sensor board for environmental monitoring and intrusion detection.</li><li>Implemented PIR motion detection circuitry including analog signal conditioning and filtering stages.</li><li>Designed temperature sensing circuitry with analog filtering and ADC interfacing.</li><li>Developed transistor-based LED driver circuits for visual system status indication.</li><li>Applied analog filtering techniques to improve measurement accuracy and reduce sensor noise.</li>`,
+
+    proj4_s4: "PCB Design and Verification",
+    proj4_s4_bullets: `<li>Created custom schematic symbols, PCB footprints, and 3D component models directly from manufacturer datasheets.</li><li>Designed a multi-sheet schematic architecture to improve project organization and maintainability.</li><li>Performed PCB component placement, routing, and power trace optimization.</li><li>Applied trace-width calculations for current-carrying power lines and optimized decoupling capacitor placement.</li><li>Executed Design Rule Check (DRC) verification and resolved spacing, silkscreen, footprint, and routing violations.</li><li>Generated manufacturing-ready PCB outputs including Gerber files and fabrication documentation.</li>`,
+
+    footer_copy: "© Copyright 2026 Pınar Yılmaz"
   },
   tr: {
-    page_title: "Deneyim | Ahmed Tamer",
+    page_title: "Deneyim | Pınar Yılmaz",
     nav_about: "hakkımda", nav_experience: "deneyim", nav_projects: "projeler",
     nav_repositories: "depolar", nav_cv: "özgeçmiş",
     page_h1: "deneyim",
-    page_subtitle: "Mühendislik ve makine öğrenmesindeki mesleki ve araştırma deneyimim.",
-    exp1_title: "Teknik Operasyon Mühendisi", exp1_date: "Eyl 2024 – Günümüz",
-    exp1_company: "Four Mansions Hotel — Kayseri, Türkiye",
-    exp1_bullets: `<li>ESP32 mikrodenetleyici ve Blynk IoT platformu kullanarak uzaktan Kapı Açma sistemi tasarlayıp konuşlandırdım; tesis personeli için kablosuz erişim kontrolü sağlayarak manuel müdahale ihtiyacını ortadan kaldırdım.</li><li>Kontaktör ve devre kesici düzenlemelerini yeniden yapılandırarak otelin endüstriyel aydınlatma altyapısını optimize ettim; enerji dağıtım güvenilirliğini artırırken arıza riskini azalttım.</li><li>Rakip otel fiyatlandırma ve doluluk trendlerini otomatik takip eden Python tabanlı web kazıma ve pazar istihbarat aracı geliştirdim; yönetimin gelir stratejisi kararlarını doğrudan destekledim.</li><li>Mutfak, resepsiyon ve teknik bakım departmanlarında çapraz eğitim aldım — hızlı operasyonel uyum yeteneği ve tüm organizasyon düzeylerinde etkili iletişim becerisi sergiledim.</li>`,
-    exp2_title: "Makine Öğrenmesi Stajyeri", exp2_date: "Haz 2024 – Ağu 2024",
-    exp2_company: "MTM Biotech — Kayseri, Türkiye",
-    exp2_bullets: `<li>EMG sinyallerinden el hareketlerini çözmek için <strong>%82 doğruluk</strong> elde eden sınıflandırma modeli geliştirdim; protez bir kolda bireysel parmak hareketlerinin kontrolünü mümkün kıldım.</li><li>Model doğruluğunu temel yaklaşımların ötesinde önemli ölçüde artıran CNN derin öğrenme ve dalgacık dönüşümünü özellik çıkarımı için uyguladım.</li><li>Tam ML pipeline'ını yönettim: veri toplama, ön işleme, özellik mühendisliği, model eğitimi ve donanıma gerçek zamanlı çıkarım.</li>`,
-    section_references: "referanslar", ref_role: "COO, MTM Biotech",
-    footer_copy: "© Telif Hakkı 2026 Ahmed Tamer"
+    page_subtitle: "Mühendislik ve gömülü sistemlerdeki mesleki deneyimim.",
+
+    exp1_title: "Mühendislik Stajyeri — PCB Tasarımı",
+    exp1_date: "Nis 2026 – May 2026",
+    exp1_company: "MASSWELL — Kayseri, Türkiye",
+    exp1_bullets: `<li>STM32 tabanlı akıllı güvenlik sistemi için şematik tasarımdan üretim dosyalarına kadar PCB tasarımını yürüttüm.</li><li>Üretim için PCB yönlendirme ve Gerber dosyalarını hazırladım.</li><li>Kart montajı, lehimleme ve donanım doğrulama testlerini gerçekleştirdim.</li>`,
+
+    exp2_title: "Mühendislik Stajyeri — Gömülü Sistemler",
+    exp2_date: "Şub 2026 – Mar 2026",
+    exp2_company: "MASSWELL — Kayseri, Türkiye",
+    exp2_bullets: `<li>ESP32 üzerinden UART ile pil verisi toplayan ve RTC entegrasyonuyla SD karta kaydeden bir sistem geliştirdim.</li><li>SD kartı fiziksel olarak çıkarmadan gerçek zamanlı izleme ve dosya indirme imkânı sağlayan masaüstü uygulaması tasarladım.</li>`,
+
+    exp3_title: "Mühendislik Stajyeri — İletişim Sistemleri",
+    exp3_date: "Tem 2025 – Ağu 2025",
+    exp3_company: "MASSWELL — Kayseri, Türkiye",
+    exp3_bullets: `<li>SIM800L modülü aracılığıyla pil yönetim sistemi iletişimi için donanım-yazılım entegrasyonunu uyguladım.</li><li>Gerçek zamanlı veri iletimi için TCP üzerinden MQTT kullanan uzaktan izleme altyapısı kurdum.</li>`,
+
+    section_projects: "projeler",
+
+    proj1_name: "Pil İzleme Veri Kaydedici ve Masaüstü Uygulaması",
+    proj1_tools: "ESP32 · C++ · Python · UART · SPI · RTC · SD Kart · CSV",
+    proj1_bullets: `<li>ESP32 tabanlı pil izleme ve veri kayıt sistemi için C++ firmware geliştirdim.</li><li>Pil parametresi kaydı için UART, SPI, RTC ve SD kart entegrasyonu uyguladım.</li><li>Gerçek zamanlı izleme, hata tespiti, dosya yönetimi ve veri görselleştirme için Python masaüstü uygulaması geliştirdim.</li><li>Dosya aktarım süresini yaklaşık <strong>50 dakikadan 7 dakikaya</strong> düşürerek performansı optimize ettim.</li><li>Otomatik hata tespiti, izleme tabanlı iletişim denetimi ve CSV dışa aktarma işlevleri uyguladım.</li>`,
+
+    proj2_name: "ESP32 Tabanlı Pil İzleme Uygulaması",
+    proj2_tools: "Python · ESP32 · BQ78Z100 BMS · UART · JSON · CSV",
+    proj2_bullets: `<li>ESP32 ve BQ78Z100 tabanlı BMS üzerinden alınan pil parametrelerini izlemek için Python masaüstü uygulaması geliştirdim.</li><li>UART iletişimi, veri ayrıştırma, JSON tabanlı depolama, otomatik kayıt yönetimi ve CSV dışa aktarma uyguladım.</li><li>Gerçek zamanlı pil izleme ve tanılama için grafik kullanıcı arayüzü tasarladım.</li>`,
+
+    proj3_name: "Masswell Envanter Yönetim Sistemi",
+    proj3_tools: "JavaScript · Next.js · Supabase · Vercel · REST API",
+    proj3_bullets: `<li>Gerçek zamanlı stok takibi ve envanter analitiği içeren bulut tabanlı envanter yönetim platformu geliştirdim.</li><li>Supabase kullanarak ürün, kategori, depo ve stok hareketi yönetimi uyguladım.</li><li>HTTPS üzerinden REST API'leri aracılığıyla frontend-backend iletişimini entegre ettim.</li><li>Duyarlı kullanıcı arayüzleri tasarlayıp uygulamayı Vercel'de yayınladım.</li>`,
+
+    proj4_name: "Akıllı Güvenlik ve İzleme Sistemi — PCB Tasarımı",
+    proj4_tools: "Altium Designer · STM32 · ESP32 · Şematik Yakalama · Donanım Tasarımı",
+    proj4_overview: "Altium Designer kullanarak sıfırdan çok sayfalı PCB tabanlı Akıllı Güvenlik ve İzleme Sistemi tasarladım. Proje; özel bileşen kütüphanesi oluşturma, şematik yakalama, PCB düzen tasarımı, güç dağıtım planlaması, sinyal yönlendirme, tasarım doğrulama ve üretime hazır çıktıların hazırlanmasını kapsadı.",
+
+    proj4_s1: "Güç Yönetimi Tasarımı",
+    proj4_s1_bullets: `<li>Transformatör, köprü doğrultucu, filtreleme kapasitörleri ve koruma bileşenlerini içeren yalıtılmış AC-DC güç dönüşüm aşaması tasarladım.</li><li>Dijital ve analog alt sistemler için kararlı güç rayları sağlamak amacıyla çok aşamalı DC-DC güç mimarisi (12V→5V→3.3V) geliştirdim.</li><li>Röle güç devreleri ve dış yük kontrolü için korumalı güç dağıtım ağı uyguladım.</li><li>Güç kararlılığını artırmak ve elektriksel gürültüyü azaltmak için pasif bileşenler ve filtreleme aşamaları seçtim.</li><li>Programlama, sensörler, iletişim modülleri ve harici çevre birimleri için konnektör arayüzleri tasarladım.</li>`,
+
+    proj4_s2: "Mikrodenetleyici ve Kontrol Birimi Tasarımı",
+    proj4_s2_bullets: `<li>Sistem izleme, iletişim ve karar verme işlemlerinden sorumlu merkezi STM32 tabanlı kontrol kartını tasarladım.</li><li>ESP32 Wi-Fi modülü, RTC, sıcaklık sensörü, PIR dedektörü, buzzer alarm ve röle kontrol çıkışlarını entegre ettim.</li><li>UART, SPI, I²C, ADC, GPIO ve SWD programlama/hata ayıklama arayüzleri kullanarak iletişim arayüzleri uyguladım.</li><li>Saat devresi, reset devresi, önyükleme yapılandırması, ESD koruması, pull-up/pull-down ağları ve ayrıştırma kapasitörü ağları tasarladım.</li><li>Güç bütünlüğü ve gürültü azaltma gereksinimlerini göz önünde bulundurarak sinyal yönlendirme ve donanım entegrasyonu gerçekleştirdim.</li>`,
+
+    proj4_s3: "Sensör Kartı Tasarımı",
+    proj4_s3_bullets: `<li>Çevre izleme ve izinsiz giriş tespiti için özel sensör kartı tasarladım.</li><li>Analog sinyal koşullandırma ve filtreleme aşamalarını içeren PIR hareket algılama devresi uyguladım.</li><li>Analog filtreleme ve ADC arayüzü ile sıcaklık algılama devresi tasarladım.</li><li>Görsel sistem durumu gösterimi için transistör tabanlı LED sürücü devreleri geliştirdim.</li><li>Ölçüm doğruluğunu artırmak ve sensör gürültüsünü azaltmak için analog filtreleme teknikleri uyguladım.</li>`,
+
+    proj4_s4: "PCB Tasarımı ve Doğrulama",
+    proj4_s4_bullets: `<li>Üretici veri sayfalarından doğrudan özel şematik semboller, PCB ayak izleri ve 3D bileşen modelleri oluşturdum.</li><li>Proje organizasyonunu ve sürdürülebilirliği iyileştirmek için çok sayfalı şematik mimari tasarladım.</li><li>PCB bileşen yerleşimi, yönlendirme ve güç izi optimizasyonu gerçekleştirdim.</li><li>Akım taşıyan güç hatları için iz genişliği hesaplamaları uyguladım ve ayrıştırma kapasitörü yerleşimini optimize ettim.</li><li>Tasarım Kuralı Kontrolü (DRC) doğrulaması yaparak aralık, ipek baskı, ayak izi ve yönlendirme ihlallerini giderdim.</li><li>Gerber dosyaları ve üretim belgesi dahil üretime hazır PCB çıktıları oluşturdum.</li>`,
+
+    footer_copy: "© Telif Hakkı 2026 Pınar Yılmaz"
   }
 };
 
@@ -226,13 +549,44 @@ function applyLang(lang) {
   document.title = i18n[lang].page_title;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+    if (i18n[lang][key] !== undefined) {
+      if (el.hasAttribute('data-i18n-html')) {
+        el.innerHTML = i18n[lang][key];
+      } else {
+        el.textContent = i18n[lang][key];
+      }
+    }
   });
   document.getElementById('lang-toggle').textContent = lang === 'en' ? 'TR' : 'EN';
   localStorage.setItem('lang', lang);
 }
 
+/* ── Lightbox ── */
+let lbImages = [];
+let lbIndex = 0;
+
+function openLightbox(imgs, idx) {
+  lbImages = imgs;
+  lbIndex = idx;
+  document.getElementById('lb-img').src = lbImages[lbIndex].src;
+  document.getElementById('lb-img').alt = lbImages[lbIndex].alt;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function lbMove(dir) {
+  lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+  document.getElementById('lb-img').src = lbImages[lbIndex].src;
+  document.getElementById('lb-img').alt = lbImages[lbIndex].alt;
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  /* Theme */
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
   document.getElementById('light-toggle').addEventListener('click', () => {
@@ -240,11 +594,15 @@ window.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
   });
+
+  /* Lang */
   const savedLang = localStorage.getItem('lang') || 'en';
   applyLang(savedLang);
   document.getElementById('lang-toggle').addEventListener('click', () => {
     applyLang(document.documentElement.getAttribute('data-lang') === 'en' ? 'tr' : 'en');
   });
+
+  /* Progress bar */
   const progressBar = document.getElementById('progress');
   if (progressBar) {
     document.addEventListener('scroll', () => {
@@ -253,6 +611,31 @@ window.addEventListener('DOMContentLoaded', () => {
       progressBar.max = 100;
     });
   }
+
+  /* Photo grid lightbox */
+  document.querySelectorAll('.photo-grid').forEach(grid => {
+    const imgs = Array.from(grid.querySelectorAll('img'));
+    imgs.forEach((img, idx) => {
+      img.addEventListener('click', () => {
+        const visible = imgs.filter(i => i.style.display !== 'none');
+        const visIdx = visible.indexOf(img);
+        openLightbox(visible, visIdx >= 0 ? visIdx : 0);
+      });
+    });
+  });
+
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => lbMove(-1));
+  document.getElementById('lb-next').addEventListener('click', () => lbMove(1));
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  });
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbMove(-1);
+    if (e.key === 'ArrowRight') lbMove(1);
+  });
 });
 </script>
 </body>
